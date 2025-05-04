@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derivative Rules Presentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="slide active" id="slide-1">
+      <h1>Derivative Rules</h1>
+      <p class="subtitle">Expanded Explanation of the Derivative Rules</p>
+    </div>
+    <div class="slide" id="slide-2">
+      <h2>1. Power Rule</h2>
+      <p>If f(x) = x<sup>n</sup>, then f'(x) = n·x<sup>n-1</sup>.</p>
+      <p>This rule applies when you have a variable raised to a constant power. For example, if f(x) = x<sup>3</sup>, then f'(x) = 3x<sup>2</sup>. This rule is fundamental in calculus and simplifies finding the derivative of polynomial functions.</p>
+    </div>
+    <div class="slide" id="slide-3">
+      <h2>2. Constant Rule</h2>
+      <p>If f(x) = c, where c is a constant, then f'(x) = 0.</p>
+      <p>A constant function is flat, meaning it has no rate of change, so its derivative is zero. Example: f(x) = 7 → f'(x) = 0.</p>
+    </div>
+    <div class="slide" id="slide-4">
+      <h2>3. Constant Multiple Rule</h2>
+      <p>If f(x) = c·g(x), then f'(x) = c·g'(x).</p>
+      <p>You can factor out constants when differentiating. For example, if f(x) = 5x<sup>2</sup>, then f'(x) = 5·(2x) = 10x.</p>
+    </div>
+    <div class="slide" id="slide-5">
+      <h2>4. Sum Rule</h2>
+      <p>If f(x) = g(x) + h(x), then f'(x) = g'(x) + h'(x).</p>
+      <p>You can take the derivative of each term separately. Example: f(x) = x<sup>2</sup> + x → f'(x) = 2x + 1.</p>
+    </div>
+    <div class="slide" id="slide-6">
+      <h2>5. Difference Rule</h2>
+      <p>If f(x) = g(x) - h(x), then f'(x) = g'(x) - h'(x).</p>
+      <p>Similar to the sum rule but with subtraction. For instance, f(x) = x<sup>3</sup> - x → f'(x) = 3x<sup>2</sup> - 1.</p>
+    </div>
+    <div class="slide" id="slide-7">
+      <h2>6. Product Rule</h2>
+      <p>If f(x) = g(x)·h(x), then f'(x) = g'(x)·h(x) + g(x)·h'(x).</p>
+      <p>This rule is used when multiplying two functions. For example, if f(x) = x<sup>2</sup>·sin(x), then f'(x) = 2x·sin(x) + x<sup>2</sup>·cos(x).</p>
+    </div>
+    <div class="slide" id="slide-8">
+      <h2>7. Quotient Rule</h2>
+      <p>If f(x) = g(x)/h(x), then f'(x) = (g'(x)·h(x) - g(x)·h'(x)) / [h(x)]<sup>2</sup>.</p>
+      <p>Used when one function is divided by another. For instance, if f(x) = x / (x+1), then apply the rule to get the derivative.</p>
+    </div>
+    <div class="slide" id="slide-9">
+      <h2>8. Chain Rule</h2>
+      <p>If f(x) = g(h(x)), then f'(x) = g'(h(x))·h'(x).</p>
+      <p>This rule is used for composite functions. For example, if f(x) = (3x+1)<sup>2</sup>, then f'(x) = 2·(3x+1)·3 = 6·(3x+1).</p>
+    </div>
+    <!-- MCQ Slides -->
+    <div class="slide" id="slide-10">
+      <h2>MCQ 1</h2>
+      <p>What is the derivative of f(x) = x<sup>5</sup>?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="0" data-correct="true">5x<sup>4</sup></button>
+        <button class="mcq-btn" data-mcq="0">x<sup>4</sup></button>
+        <button class="mcq-btn" data-mcq="0">x<sup>5</sup></button>
+        <button class="mcq-btn" data-mcq="0">5x<sup>5</sup></button>
+      </div>
+      <div class="mcq-feedback" id="feedback-0"></div>
+      <div class="mcq-explanation" id="explanation-0">Explanation: Using the Power Rule: derivative of x<sup>n</sup> is n·x<sup>n-1</sup>, so derivative of x<sup>5</sup> is 5x<sup>4</sup>.</div>
+    </div>
+    <div class="slide" id="slide-11">
+      <h2>MCQ 2</h2>
+      <p>If f(x) = 3x, what is f'(x)?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="1">0</button>
+        <button class="mcq-btn" data-mcq="1" data-correct="true">3</button>
+        <button class="mcq-btn" data-mcq="1">x</button>
+        <button class="mcq-btn" data-mcq="1">3x</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-1"></div>
+      <div class="mcq-explanation" id="explanation-1">Explanation: The derivative of a linear function f(x) = ax is simply the coefficient a, so derivative is 3.</div>
+    </div>
+    <div class="slide" id="slide-12">
+      <h2>MCQ 3</h2>
+      <p>Find the derivative of f(x) = x<sup>2</sup> + x</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="2">2x</button>
+        <button class="mcq-btn" data-mcq="2" data-correct="true">2x + 1</button>
+        <button class="mcq-btn" data-mcq="2">1</button>
+        <button class="mcq-btn" data-mcq="2">x + 1</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-2"></div>
+      <div class="mcq-explanation" id="explanation-2">Explanation: f(x) = x<sup>2</sup> + x ⇒ f'(x) = 2x + 1 by applying Power Rule to each term.</div>
+    </div>
+    <div class="slide" id="slide-13">
+      <h2>MCQ 4</h2>
+      <p>What is the derivative of a constant function?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="3" data-correct="true">0</button>
+        <button class="mcq-btn" data-mcq="3">1</button>
+        <button class="mcq-btn" data-mcq="3">x</button>
+        <button class="mcq-btn" data-mcq="3">Undefined</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-3"></div>
+      <div class="mcq-explanation" id="explanation-3">Explanation: The derivative of a constant is always 0 by the Constant Rule.</div>
+    </div>
+    <div class="slide" id="slide-14">
+      <h2>MCQ 5</h2>
+      <p>What is the derivative of f(x) = x<sup>3</sup> - x?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="4" data-correct="true">3x<sup>2</sup> - 1</button>
+        <button class="mcq-btn" data-mcq="4">x<sup>2</sup> - 1</button>
+        <button class="mcq-btn" data-mcq="4">3x - 1</button>
+        <button class="mcq-btn" data-mcq="4">3x<sup>2</sup> + 1</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-4"></div>
+      <div class="mcq-explanation" id="explanation-4">Explanation: Derivative of x<sup>3</sup> is 3x<sup>2</sup> and derivative of -x is -1, so total derivative is 3x<sup>2</sup> - 1.</div>
+    </div>
+    <div class="slide" id="slide-15">
+      <h2>MCQ 6</h2>
+      <p>If f(x) = 2x<sup>2</sup> and g(x) = x<sup>3</sup>, find d/dx[f(x) + g(x)]</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="5">2x<sup>2</sup> + 3x<sup>2</sup></button>
+        <button class="mcq-btn" data-mcq="5" data-correct="true">4x + 3x<sup>2</sup></button>
+        <button class="mcq-btn" data-mcq="5">4x + 3x<sup>2</sup></button>
+        <button class="mcq-btn" data-mcq="5">2x + 3x<sup>2</sup></button>
+      </div>
+      <div class="mcq-feedback" id="feedback-5"></div>
+      <div class="mcq-explanation" id="explanation-5">Explanation: Use the Sum Rule: derivative of 2x<sup>2</sup> is 4x, derivative of x<sup>3</sup> is 3x<sup>2</sup>, so sum is 4x + 3x<sup>2</sup>.</div>
+    </div>
+    <div class="slide" id="slide-16">
+      <h2>MCQ 7</h2>
+      <p>Find the derivative of f(x) = (x<sup>2</sup>)(sin x)</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq="6" data-correct="true">2x·sin x + x<sup>2</sup>·cos x</button>
+        <button class="mcq-btn" data-mcq="6">2x·sin x</button>
+        <button class="mcq-btn" data-mcq="6">x<sup>2</sup>·cos x</button>
+        <button class="mcq-btn" data-mcq="6">sin x + cos x</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-6"></div>
+      <div class="mcq-explanation" id="explanation-6">Explanation: Using Product Rule: f(x) = u·v, f'(x) = u'·v + u·v'. Here, u = x<sup>2</sup> and v = sin x, so f'(x) = 2x·sin x + x<sup>2</sup>·cos x.</div>
+    </div>
+    <!-- Navigation -->
+    <div class="nav">
+      <button id="prevBtn">Previous</button>
+      <span id="slide-indicator"></span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicator = document.getElementById('slide-indicator');
+    let currentSlide = 0;
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+      });
+      indicator.textContent = `Slide ${idx+1} of ${slides.length}`;
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === slides.length-1;
+    }
+    prevBtn.onclick = () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    };
+    nextBtn.onclick = () => {
+      if (currentSlide < slides.length-1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    };
+    function showAnswer(idx) {
+      document.getElementById(`answer-${idx}`).style.display = 'block';
+    }
+    // Hide all answers initially
+    document.querySelectorAll('.answer').forEach(a => a.style.display = 'none');
+    // Show first slide
+    showSlide(currentSlide);
+
+    // MCQ logic
+    const mcqCount = 7;
+    for (let i = 0; i < mcqCount; i++) {
+      const btns = document.querySelectorAll(`.mcq-btn[data-mcq='${i}']`);
+      const feedback = document.getElementById(`feedback-${i}`);
+      const explanation = document.getElementById(`explanation-${i}`);
+      if (explanation) explanation.style.display = 'none';
+      btns.forEach(btn => {
+        btn.onclick = function() {
+          // Prevent multiple answers
+          if (btns[0].classList.contains('answered')) return;
+          btns.forEach(b => b.classList.add('answered'));
+          if (btn.hasAttribute('data-correct')) {
+            btn.classList.add('correct');
+            feedback.innerHTML = '<span class="correct-msg">Correct!</span>';
+          } else {
+            btn.classList.add('wrong');
+            // Highlight the correct one
+            btns.forEach(b => { if (b.hasAttribute('data-correct')) b.classList.add('correct'); });
+            feedback.innerHTML = '<span class="wrong-msg">Wrong!</span>';
+          }
+          if (explanation) explanation.style.display = 'block';
+        };
+      });
+    }
+  </script>
+</body>
+</html>
