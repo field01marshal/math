@@ -8,6 +8,118 @@
 </head>
 <body>
   <div class="container">
+    <!-- Index/Home Slide -->
+    <div class="slide active" id="slide-index">
+      <h1>Choose a Topic</h1>
+      <div class="topic-choices">
+        <button class="topic-btn" id="choose-math">Math</button>
+        <button class="topic-btn" id="choose-mechanics">Mechanics</button>
+      </div>
+    </div>
+    <!-- Mechanics Slides (start hidden) -->
+    <div class="slide mechanics-slide" id="mech-1">
+      <h1>Motion Under Gravity</h1>
+      <p class="subtitle">Understanding Free Fall and Vertical Motion</p>
+    </div>
+    <div class="slide mechanics-slide" id="mech-2">
+      <h2>Introduction to Gravity</h2>
+      <p>Gravity is a force of attraction between any two masses.<br>
+      Near the Earth's surface, gravity gives objects an acceleration of approximately <b>9.8 m/s²</b> downward.<br>
+      This acceleration affects all objects equally regardless of mass (ignoring air resistance).</p>
+    </div>
+    <div class="slide mechanics-slide" id="mech-3">
+      <h2>Free Fall Motion</h2>
+      <ul>
+        <li>Free fall is the motion of an object under the influence of gravity alone.</li>
+        <li>Acceleration = <b>9.8 m/s²</b> downward</li>
+        <li>Initial velocity = <b>0 m/s</b> if dropped</li>
+        <li>Distance fallen: <b>s = ½gt²</b></li>
+        <li>Velocity after time t: <b>v = gt</b></li>
+      </ul>
+    </div>
+    <div class="slide mechanics-slide" id="mech-4">
+      <h2>Upward and Downward Motion</h2>
+      <ul>
+        <li>When an object is thrown upward:</li>
+        <li>It slows down by 9.8 m/s² until velocity = 0 at the highest point.</li>
+        <li>Then it accelerates downward.</li>
+        <li>Total time = 2 × time to reach the highest point</li>
+        <li><b>Symmetry:</b> Time up = Time down</li>
+      </ul>
+    </div>
+    <div class="slide mechanics-slide" id="mech-5">
+      <h2>Equations of Motion Under Gravity</h2>
+      <ul>
+        <li><b>v = u + at</b></li>
+        <li><b>s = ut + ½at²</b></li>
+        <li><b>v² = u² + 2as</b></li>
+      </ul>
+      <p>Where:<br>
+        u = initial velocity<br>
+        v = final velocity<br>
+        s = displacement<br>
+        a = acceleration (use –9.8 if upward)
+      </p>
+    </div>
+    <div class="slide mechanics-slide" id="mech-6">
+      <h2>Effect of Air Resistance</h2>
+      <ul>
+        <li>In real life, air resistance slows down falling objects.</li>
+        <li>Light objects like feathers fall slower than heavy ones.</li>
+        <li>In a vacuum, all objects fall at the same rate.</li>
+        <li><b>Terminal velocity:</b> The constant speed when air resistance balances gravity.</li>
+      </ul>
+    </div>
+    <div class="slide mechanics-slide" id="mech-7">
+      <h2>MCQ 1</h2>
+      <p>An object is dropped from a height. What is its speed after 3 seconds?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq-mech="0">9.8 m/s</button>
+        <button class="mcq-btn" data-mcq-mech="0">19.6 m/s</button>
+        <button class="mcq-btn" data-mcq-mech="0" data-correct="true">29.4 m/s</button>
+        <button class="mcq-btn" data-mcq-mech="0">39.2 m/s</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-mech-0"></div>
+      <div class="mcq-explanation" id="explanation-mech-0">Use the formula: v = gt = 9.8 × 3 = 29.4 m/s<br>Correct Answer: C<br>Because it's in free fall and starts from rest.</div>
+    </div>
+    <div class="slide mechanics-slide" id="mech-8">
+      <h2>MCQ 2</h2>
+      <p>At the top of its motion, the velocity of a ball thrown straight up is:</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq-mech="1">Maximum</button>
+        <button class="mcq-btn" data-mcq-mech="1">9.8 m/s</button>
+        <button class="mcq-btn" data-mcq-mech="1" data-correct="true">Zero</button>
+        <button class="mcq-btn" data-mcq-mech="1">Equal to initial velocity</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-mech-1"></div>
+      <div class="mcq-explanation" id="explanation-mech-1">At the highest point, velocity = 0<br>Acceleration = –9.8 m/s² still acts<br>Correct Answer: C<br>Velocity becomes zero just before the ball begins to fall back down.</div>
+    </div>
+    <div class="slide mechanics-slide" id="mech-9">
+      <h2>MCQ 3</h2>
+      <p>Which of the following equations is NOT suitable for vertical motion under gravity?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq-mech="2">v = u + at</button>
+        <button class="mcq-btn" data-mcq-mech="2">s = ut + ½at²</button>
+        <button class="mcq-btn" data-mcq-mech="2">v² = u² + 2as</button>
+        <button class="mcq-btn" data-mcq-mech="2" data-correct="true">F = ma²</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-mech-2"></div>
+      <div class="mcq-explanation" id="explanation-mech-2">Correct Answer: D<br>F = ma² is incorrect because the formula for force is F = ma, not ma².<br>The other equations are standard kinematic equations used in vertical motion.</div>
+    </div>
+    <div class="slide mechanics-slide" id="mech-10">
+      <h2>MCQ 4</h2>
+      <p>A ball is thrown vertically upward with a velocity of 20 m/s. How long will it take to reach the highest point?</p>
+      <div class="mcq-list">
+        <button class="mcq-btn" data-mcq-mech="3">1 s</button>
+        <button class="mcq-btn" data-mcq-mech="3" data-correct="true">2 s</button>
+        <button class="mcq-btn" data-mcq-mech="3">3 s</button>
+        <button class="mcq-btn" data-mcq-mech="3">4 s</button>
+      </div>
+      <div class="mcq-feedback" id="feedback-mech-3"></div>
+      <div class="mcq-explanation" id="explanation-mech-3">Use v = u + at, with v = 0 at the top, u = 20 m/s, and a = -9.8 m/s²<br>0 = 20 - 9.8t → t = 20 / 9.8 ≈ 2.04 seconds<br>Correct Answer: B</div>
+    </div>
+    <!-- Mechanics slides end -->
+    <!-- The rest of the math slides remain unchanged -->
     <div class="slide active" id="slide-1">
       <h1>Derivative Rules</h1>
       <p class="subtitle">Expanded Explanation of the Derivative Rules</p>
@@ -196,6 +308,84 @@
           } else {
             btn.classList.add('wrong');
             // Highlight the correct one
+            btns.forEach(b => { if (b.hasAttribute('data-correct')) b.classList.add('correct'); });
+            feedback.innerHTML = '<span class="wrong-msg">Wrong!</span>';
+          }
+          if (explanation) explanation.style.display = 'block';
+        };
+      });
+    }
+
+    // Add topic switching logic
+    const allSlides = document.querySelectorAll('.slide');
+    const mathSlides = Array.from(allSlides).filter(s => !s.classList.contains('mechanics-slide') && s.id !== 'slide-index');
+    const mechanicsSlides = Array.from(document.querySelectorAll('.mechanics-slide'));
+    const indexSlide = document.getElementById('slide-index');
+    const chooseMath = document.getElementById('choose-math');
+    const chooseMech = document.getElementById('choose-mechanics');
+    let topic = null; // 'math' or 'mechanics'
+    let topicSlideIdx = 0;
+    function showTopicSlide(idx) {
+      allSlides.forEach(s => s.classList.remove('active'));
+      if (topic === 'math') {
+        mathSlides[idx].classList.add('active');
+        indicator.textContent = `Slide ${idx+1} of ${mathSlides.length}`;
+        prevBtn.disabled = idx === 0;
+        nextBtn.disabled = idx === mathSlides.length-1;
+      } else if (topic === 'mechanics') {
+        mechanicsSlides[idx].classList.add('active');
+        indicator.textContent = `Slide ${idx+1} of ${mechanicsSlides.length}`;
+        prevBtn.disabled = idx === 0;
+        nextBtn.disabled = idx === mechanicsSlides.length-1;
+      }
+    }
+    chooseMath.onclick = () => {
+      topic = 'math';
+      topicSlideIdx = 0;
+      showTopicSlide(topicSlideIdx);
+    };
+    chooseMech.onclick = () => {
+      topic = 'mechanics';
+      topicSlideIdx = 0;
+      showTopicSlide(topicSlideIdx);
+    };
+    prevBtn.onclick = () => {
+      if (topicSlideIdx > 0) {
+        topicSlideIdx--;
+        showTopicSlide(topicSlideIdx);
+      }
+    };
+    nextBtn.onclick = () => {
+      if (topic === 'math' && topicSlideIdx < mathSlides.length-1) {
+        topicSlideIdx++;
+        showTopicSlide(topicSlideIdx);
+      } else if (topic === 'mechanics' && topicSlideIdx < mechanicsSlides.length-1) {
+        topicSlideIdx++;
+        showTopicSlide(topicSlideIdx);
+      }
+    };
+    // On load, show only the index slide
+    allSlides.forEach(s => s.classList.remove('active'));
+    indexSlide.classList.add('active');
+    indicator.textContent = '';
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+    // Mechanics MCQ logic
+    const mcqMechCount = 4;
+    for (let i = 0; i < mcqMechCount; i++) {
+      const btns = document.querySelectorAll(`.mcq-btn[data-mcq-mech='${i}']`);
+      const feedback = document.getElementById(`feedback-mech-${i}`);
+      const explanation = document.getElementById(`explanation-mech-${i}`);
+      if (explanation) explanation.style.display = 'none';
+      btns.forEach(btn => {
+        btn.onclick = function() {
+          if (btns[0].classList.contains('answered')) return;
+          btns.forEach(b => b.classList.add('answered'));
+          if (btn.hasAttribute('data-correct')) {
+            btn.classList.add('correct');
+            feedback.innerHTML = '<span class="correct-msg">Correct!</span>';
+          } else {
+            btn.classList.add('wrong');
             btns.forEach(b => { if (b.hasAttribute('data-correct')) b.classList.add('correct'); });
             feedback.innerHTML = '<span class="wrong-msg">Wrong!</span>';
           }
